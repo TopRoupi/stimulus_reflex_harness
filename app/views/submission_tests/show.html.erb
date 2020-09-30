@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Submission:</strong>
+  <%= @submission_test.submission_id %>
+</p>
+
+<p>
+  <strong>Test:</strong>
+  <%= @submission_test.test_id %>
+</p>
+
+<%= link_to 'Edit', edit_submission_test_path(@submission_test) %> |
+<%= link_to 'Back', submission_tests_path %>

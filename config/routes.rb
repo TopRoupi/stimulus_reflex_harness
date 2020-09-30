@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  root to: "home#index"
+  resources :submission_tests
+  resources :submissions
+  resources :tests
+  resources :exercices
+  root to: "submissions#index"
 end

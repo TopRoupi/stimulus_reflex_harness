@@ -11,6 +11,14 @@
   </head>
 
   <body>
+    <%= link_to 'exercices', exercices_path %>
+     | 
+    <%= link_to 'submissions',submissions_path %>
+     | 
+    <%= link_to 'submission_tests', submission_tests_path %>
+     | 
+    <%= link_to 'tests', tests_path %>
+    <br>
     <%= yield %>
   </body>
 </html>

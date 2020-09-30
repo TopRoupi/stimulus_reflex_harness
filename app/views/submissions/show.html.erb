@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Exercice:</strong>
+  <%= @submission.exercice_id %>
+</p>
+
+<%= render partial: 'submissions/tests_line', locals: {submission: @submission}%>
+
+<%= link_to 'Edit', edit_submission_path(@submission) %> |
+<%= link_to 'Back', submissions_path %>
