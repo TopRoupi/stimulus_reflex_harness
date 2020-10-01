@@ -6,6 +6,9 @@
 </p>
 
 <%= render partial: 'submissions/tests_line', locals: {submission: @submission}%>
+<% @submission.submission_tests.each do |test| %>
+  <%= render partial: 'submissions/test_line', locals: {test: test} %>
+<% end %>
 
 <%= link_to 'Edit', edit_submission_path(@submission) %> |
 <%= link_to 'Back', submissions_path %>

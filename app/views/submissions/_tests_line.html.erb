@@ -1,9 +1,5 @@
 <p id="<%= dom_id(submission) %>">
   <strong>Tests:</strong>
-  Processed <%= submission.submission_tests.count%> tests of <%= submission.exercice.tests.count%>
-  <br>
-  <% submission.submission_tests.each do |test| %>
-    <%= test %>
-    <br>
-  <% end %>
+  Processed <%= submission.submission_tests.processed.count %> tests of <%= submission.submission_tests.count%>
 </p>
+

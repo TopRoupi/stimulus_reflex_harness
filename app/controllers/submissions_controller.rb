@@ -26,8 +26,8 @@ class SubmissionsController < ApplicationController
     if @submission.save
       redirect_to @submission, notice: 'Submission was successfully created.'
 
-      @submission.exercice.tests.each do |test|
-        ProcessSubmissionJob.perform_later @submission, test
+      @submission.submission_tests.each do |test|
+        ProcessSubmissionJob.perform_later test
       end
     else
       render :new

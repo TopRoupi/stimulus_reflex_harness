@@ -1,0 +1,6 @@
+<% color = test.process_state == 'processing' ? 'yellow' : (test.process_state == 'processed' ? 'green' : 'grey') %>
+
+<div id="<%= dom_id(test)%>" style="color: <%= color%>">
+  <%= test %> 
+  <%= test.process_state %>
+</div>
